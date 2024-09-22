@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+        i{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+        h2{
+            font-size: 2em;
+            font-weight: 800;
+            text-transform: capitalize;
+        }
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .content{
+            width: 100%; 
+        }
+        input{
+            width: 80%;
+            padding: 6px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        .btn{
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        button{
+            padding: 8px 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: greenyellow;
+            color: black;
+            cursor: pointer;
+        }
+        button:hover{
+            opacity: .8;
+        }
+        a{
+            margin: auto;
+            margin-top: 40px;
+            text-transform: capitalize;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover{
+            opacity: .8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="fa-solid fa-arrow-left" href="/login"></i>
+          <h2 class="judul">edit Blogs</h2>
+          <div class="content">
+              <form action="/editData/<%=id%>?_method=PUT" method="post">
+                      <input type="text" name="judul" id="judul" placeholder="judul">
+                      <input type="text" name="submenu" id="submenu" placeholder="submenu">     
+                      <input type="text" name="context" id="context" placeholder="context">
+                      <input type="date" name="tanggal" id="tanggal" placeholder="tanggal">
+                  <div class="btn">
+                      <button type="submit">submit</button>
+                      <button>cancel</button>
+                  </div>
+                  <a href="/dashboard">back</a>
+              </form>
+          </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            color: black; 
+         }
+         .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 35px;
+            border-radius: 5px;
+            background-color: greenyellow;
+         }
+         form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        
+         }
+         .col{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+         }
+         input{
+            cursor: pointer;
+            width: 125%;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+         }
+         .btn{
+            margin-top: 10px;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+         }
+         button{
+            padding: 6px 10px;
+            width: 125%;
+            background-color: white;
+            color: black;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-weight: 750;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+         }
+         b{
+            margin-top: 5px;
+            font-size: .9em;
+         }
+         a{
+            text-transform: capitalize;
+            text-decoration: none;
+         }
+         .judul{
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+         }
+         .back{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 1.5em;
+    color: black;
+}
+         .back:hover{
+            opacity: .8;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <a href="/" class="back"><i class="fa-solid fa-arrow-left"></i></a>
+        <h2 class="judul">login menu</h2>
+        <div class="content">
+            <form action="/login" method="post">
+                    <input type="text" name="username" id="username" placeholder="username">
+                    <input type="password" name="password" id="password" placeholder="password">
+                <div class="btn">
+                    <button type="submit">submit</button>
+                </div>
+            </form>
+            <p>belum punya accounts? <a href="/createAccount">createAccount</a></p>
+        </div>
+    </div>
+</body>
+</html>

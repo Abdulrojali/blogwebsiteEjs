@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h1{
+            font-size: 2vw;
+            margin-top: 25px;
+        }
+        p{
+            width: 50%;
+            font-size: .7vw;
+        }
+        b{
+            font-size: 1vw;
+        }
+        .btn{
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .btn a,button{
+            color: black;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: capitalize;
+            background-color: greenyellow;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+        .btn a,button:hover{
+            opacity: .8;
+        }
+        .topBack{
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            position:absolute;
+            top: 30px;
+            left: 30px;
+        }
+        .topBack:hover{
+            opacity: .8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/dashboard" class="topBack"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="content">
+            <p><%= findData.dateCreate %></p>
+            <h1><%= findData.tittle %></h1>
+            <b><%= findData.subject %></b>
+            <p><%= findData.content %></p>    
+            <div class="btn">
+                <a href="/editData/:<%=findData._id%>">edit</a>
+                <form action="/deleteData/<%=findData._id%>?_method=DELETE" method="post">
+                    <button type="submit">delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

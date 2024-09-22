@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+        i{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+        h2{
+            font-size: 2em;
+            font-weight: 800;
+            text-transform: capitalize;
+        }
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .content{
+            width: 100%; 
+        }
+        input{
+            width: 80%;
+            padding: 6px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        .btn{
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        button{
+            padding: 8px 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: greenyellow;
+            color: black;
+            cursor: pointer;
+        }
+        button:hover{
+            opacity: .8;
+        }
+        a{
+            margin: auto;
+            margin-top: 40px;
+            text-transform: capitalize;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover{
+            opacity: .8;
+        }
+    .back{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 1.5em;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+          <h2 class="judul">add new blogs</h2>
+          <div class="content">
+              <form action="/add" method="post">
+                      <input type="text" name="tittle" id="tittle" placeholder="tittle">
+                      <input type="text" name="subject" id="subject" placeholder="subject">     
+                      <input type="text" name="content" id="content" placeholder="content">
+                      <input type="date" name="dateCreate" id="dateCreate" placeholder="dateCreate">
+                  <div class="btn">
+                      <button type="submit">submit</button>
+                      <button>cancel</button>
+                  </div>
+                  <a href="/dashboard" class="back"><i class="fa-solid fa-arrow-left"></i></a>
+              </form>
+          </div>
+      </div>
+</body>
+</html>
